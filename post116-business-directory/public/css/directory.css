@@ -1,0 +1,433 @@
+/* Post 116 Business Directory Styles */
+
+:root {
+    --p116-primary-color: #c41e3a;
+    --p116-secondary-color: #003366;
+    --p116-accent-color: #ffd700;
+    --p116-text-color: #333;
+    --p116-light-bg: #f8f9fa;
+    --p116-border-color: #dee2e6;
+    --p116-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Directory Container */
+.p116-directory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Disclaimer */
+.p116-disclaimer {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #856404;
+    text-align: center;
+}
+
+/* Search Controls */
+.p116-directory-search {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--p116-shadow);
+}
+
+.p116-search-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto auto auto;
+    gap: 15px;
+    align-items: end;
+}
+
+@media (max-width: 768px) {
+    .p116-search-controls {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.p116-search-input-wrapper {
+    position: relative;
+}
+
+.p116-search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--p116-border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.p116-search-input:focus {
+    outline: none;
+    border-color: var(--p116-primary-color);
+}
+
+.p116-category-filter {
+    padding: 12px 15px;
+    border: 2px solid var(--p116-border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background: white;
+}
+
+.p116-flag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.p116-flag-filter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.p116-search-btn,
+.p116-clear-search {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.p116-search-btn {
+    background: var(--p116-primary-color);
+    color: white;
+}
+
+.p116-search-btn:hover {
+    background: #a31729;
+}
+
+.p116-clear-search {
+    background: var(--p116-border-color);
+    color: var(--p116-text-color);
+}
+
+.p116-clear-search:hover {
+    background: #adb5bd;
+}
+
+/* Autocomplete */
+.p116-autocomplete-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--p116-border-color);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: var(--p116-shadow);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.p116-autocomplete-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f3f4;
+    transition: background-color 0.2s ease;
+}
+
+.p116-autocomplete-item:hover,
+.p116-autocomplete-item.selected {
+    background: var(--p116-light-bg);
+}
+
+.p116-autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.p116-autocomplete-type {
+    font-size: 12px;
+    color: #666;
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+/* Loading */
+.p116-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* Results */
+.p116-results-container {
+    min-height: 300px;
+}
+
+.p116-category-section {
+    margin-bottom: 40px;
+}
+
+.p116-category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--p116-secondary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--p116-primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.p116-category-count {
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Business Grid */
+.p116-businesses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .p116-businesses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Business Card */
+.p116-business-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--p116-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--p116-border-color);
+}
+
+.p116-business-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.p116-business-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.p116-business-thumbnail {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--p116-light-bg);
+}
+
+.p116-business-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p116-business-title-wrapper {
+    flex: 1;
+}
+
+.p116-business-title {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.p116-business-title a {
+    color: var(--p116-secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.p116-business-title a:hover {
+    color: var(--p116-primary-color);
+}
+
+/* Flags */
+.p116-business-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.p116-flag {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 12px;
+    color: white;
+}
+
+.p116-flag.veteran {
+    background: var(--p116-primary-color);
+}
+
+.p116-flag.sons {
+    background: var(--p116-secondary-color);
+}
+
+.p116-flag.auxiliary {
+    background: var(--p116-accent-color);
+    color: var(--p116-text-color);
+}
+
+/* Business Info */
+.p116-business-categories {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.p116-business-owners {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--p116-text-color);
+}
+
+.p116-business-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.p116-business-phone,
+.p116-business-city {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.p116-business-services {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--p116-text-color);
+    border-top: 1px solid var(--p116-border-color);
+    padding-top: 15px;
+}
+
+/* No Results */
+.p116-no-businesses {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.p116-no-businesses p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Pagination */
+.p116-pagination-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.p116-pagination {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.p116-pagination a,
+.p116-pagination span {
+    padding: 8px 12px;
+    border: 1px solid var(--p116-border-color);
+    text-decoration: none;
+    color: var(--p116-text-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.p116-pagination a:hover {
+    background: var(--p116-primary-color);
+    color: white;
+    border-color: var(--p116-primary-color);
+}
+
+.p116-pagination .current {
+    background: var(--p116-primary-color);
+    color: white;
+    border-color: var(--p116-primary-color);
+}
+
+/* Archive Pages */
+.p116-category-archive-container,
+.p116-single-business-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.p116-category-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--p116-shadow);
+}
+
+.p116-category-header h1 {
+    color: var(--p116-secondary-color);
+    margin-bottom: 15px;
+}
+
+.p116-category-description {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.p116-category-count {
+    font-size: 14px;
+    color: #888;
+}
+
+.p116-back-to-directory {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.p116-back-to-directory .button {
+    padding: 12px 24px;
+    background: var(--p116-secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.p116-back-to-directory .button:hover {
+    background: #002244;
+}

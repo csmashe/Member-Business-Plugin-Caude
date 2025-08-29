@@ -1,0 +1,250 @@
+/* Admin Styles for Business Directory */
+
+/* Meta Box Styles */
+.p116-owners-container,
+.p116-links-container {
+    max-width: none;
+}
+
+.p116-owners-wrapper,
+.p116-links-wrapper {
+    margin-bottom: 15px;
+}
+
+/* Owner Groups */
+.p116-owner-group {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 0;
+    position: relative;
+}
+
+.p116-owner-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px 4px 0 0;
+}
+
+.p116-owner-header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.p116-remove-owner {
+    color: #a00;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.p116-remove-owner:hover {
+    color: #dc3232;
+}
+
+.p116-owner-group .form-table {
+    margin: 0;
+}
+
+.p116-owner-group .form-table td,
+.p116-owner-group .form-table th {
+    padding: 15px 20px;
+}
+
+.p116-owner-group .form-table th {
+    width: 150px;
+    font-weight: 600;
+}
+
+/* Link Groups */
+.p116-link-group {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.p116-link-handle {
+    cursor: grab;
+    color: #666;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.p116-link-handle:active {
+    cursor: grabbing;
+}
+
+.p116-link-group input {
+    width: 100%;
+}
+
+.p116-remove-link {
+    color: #a00;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.p116-remove-link:hover {
+    color: #dc3232;
+}
+
+/* Add Buttons */
+.p116-add-owner,
+.p116-add-link {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.p116-add-owner:hover,
+.p116-add-link:hover {
+    background: #005a87;
+}
+
+/* Flag Styles */
+.p116-flag {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: white;
+    margin-right: 4px;
+}
+
+.p116-flag.veteran {
+    background: #c41e3a;
+}
+
+.p116-flag.sons {
+    background: #003366;
+}
+
+.p116-flag.auxiliary {
+    background: #ffd700;
+    color: #333;
+}
+
+/* Required Fields */
+.required {
+    color: #dc3232;
+}
+
+/* Form Table Adjustments */
+.form-table th label {
+    font-weight: 600;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="tel"],
+.form-table input[type="url"],
+.form-table textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-table textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Admin Column Styles */
+.wp-admin .wp-list-table .column-business_categories {
+    width: 15%;
+}
+
+.wp-admin .wp-list-table .column-business_owners {
+    width: 20%;
+}
+
+.wp-admin .wp-list-table .column-business_city {
+    width: 12%;
+}
+
+.wp-admin .wp-list-table .column-business_phone {
+    width: 15%;
+}
+
+.wp-admin .wp-list-table .column-business_flags {
+    width: 12%;
+}
+
+/* Filter Dropdowns */
+#business_category_filter,
+#ownership_flag_filter {
+    margin-left: 10px;
+}
+
+/* Sortable Placeholder */
+.p116-links-wrapper .ui-sortable-placeholder {
+    height: 50px;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .p116-link-group {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    
+    .p116-link-handle {
+        display: none;
+    }
+    
+    .p116-owner-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .p116-owner-group .form-table,
+    .p116-owner-group .form-table tbody,
+    .p116-owner-group .form-table tr,
+    .p116-owner-group .form-table td,
+    .p116-owner-group .form-table th {
+        display: block;
+        width: 100%;
+    }
+    
+    .p116-owner-group .form-table th {
+        padding-bottom: 5px;
+    }
+    
+    .p116-owner-group .form-table td {
+        padding-top: 0;
+    }
+}

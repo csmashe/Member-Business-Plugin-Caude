@@ -1,0 +1,26 @@
+/* This file is included on both frontend and editor */
+
+.wp-block-p116-directory .p116-directory-container {
+    max-width: none;
+    padding: 0;
+}
+
+/* Ensure block styles don't conflict with theme */
+.wp-block-p116-directory {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.wp-block-p116-directory * {
+    box-sizing: border-box;
+}
+
+/* Override theme button styles if needed */
+.wp-block-p116-directory .p116-search-btn,
+.wp-block-p116-directory .p116-clear-search {
+    font-family: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    box-shadow: none;
+}
